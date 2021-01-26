@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+    <link rel="icon" type="image/png" href="bilder/house.png">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galerie.html">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="musik.html">Musik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="random.html">Bild Generator</a>
+                </li>
+                <li class="active">
+                    <a class="nav-link" href="lernender.html">Über uns</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Über uns</h1>
+
+    <h3>Lernender 1</h3>
+    <p id="alissa"></p>
+
+    <h3>Lernender 2</h3>
+    <p id="noel"></p>
+
+
+    <script type="text/javascript">
+        const professionList = ["Mediamatiker", "Detailhandel", "Kaufmann"];
+
+        let lernender1 = {
+            "firstname": "Alissa",
+            "lastname": "Lopez",
+            "email": "rosaa@bzz.ch",
+            "profession": professionList[0],
+            "betrieb": {
+                "firma": "DER Touristik Suisse"
+            },
+        };
+        let lernender2 = {
+            "firstname": "Noel",
+            "lastname": "Koller",
+            "email": "kollern@bzz.ch",
+            "profession": professionList[0],
+            "betrieb": {
+                "firma": "Sonova AG"
+            },
+        };
+
+        //Alissa
+        let htmlObj = document.getElementById("alissa");
+        htmlObj.innerHTML =
+            `Name: ${lernender1.firstname}<br>` +
+            `Vorname: ${lernender1.lastname}<br>` +
+            `Email: ${lernender1.email}<br>` +
+            `Ausbildung: ${lernender1.profession}<br>` +
+            `Betrieb: ${lernender1.firma}<br>`;
+
+        //Noel
+        htmlObj = document.getElementById("noel");
+        htmlObj.innerHTML =
+            `Name: ${lernender2.firstname}<br>` +
+            `Vorname: ${lernender2.lastname}<br>` +
+            `Email: ${lernender2.email}<br>` +
+            `Ausbildung: ${lernender2.profession}<br>` +
+            `Betrieb: ${lernender2.firma}<br>`;
+
+    </script>
+</body>
+
+<footer>
+    <p>Leistungsbeurteilung | Alissa Lopez | Noel Koller | Modul 288</p>
+</footer>
+
+</html>
